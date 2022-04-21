@@ -85,10 +85,11 @@
         "passWithNoTests": true
       }
     },
-    "custom": {
+    "live-server": {
       "executor": "@my-workspace/my-plugin:build",
       "options": {
-        "folder": "."
+        "folder": ".",
+        "port": 8080
       }
     }
   },

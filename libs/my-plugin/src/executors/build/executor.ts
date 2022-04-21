@@ -1,5 +1,6 @@
 import { BuildExecutorSchema } from './schema';
 import { start } from 'live-server';
+import { onSigInt } from './signal';
 
 export default async function runExecutor(options: BuildExecutorSchema) {
   console.log('Starting live-server', options);
@@ -9,11 +10,7 @@ export default async function runExecutor(options: BuildExecutorSchema) {
     port: options.port
   });
 
-  const abortPromise = new Promise<void>((resolve) => {
-    process.on('SIGINT', () => resolve());
-  });
-
-  await abortPromise;
+  await onSigInt();
 
   return {
     success: true,
