@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "demo-app": "apps/demo-app",
-    "demo-app-e2e": "apps/demo-app-e2e"
+    "demo-app-e2e": "apps/demo-app-e2e",
+    "my-plugin": "libs/my-plugin",
+    "my-plugin-e2e": "apps/my-plugin-e2e"
   }
 }

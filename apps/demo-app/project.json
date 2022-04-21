@@ -84,6 +84,12 @@
         "jestConfig": "apps/demo-app/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "custom": {
+      "executor": "@my-workspace/my-plugin:build",
+      "options": {
+        "folder": "."
+      }
     }
   },
   "tags": []
